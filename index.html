@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>todo</title>
-  <link rel="stylesheet" href="style.css">
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalTodo-App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="main">
-    <h1>Todo App</h1>
-    <div class="inp">
-      <input id="input" type="text" placeholder="enter a todo task">
-      <button  id="btn">Add</button>
+    <div id="start-screen" class="main">
+        <h1>Ready?</h1>
+        <div style="text-align: center; padding: 20px;">
+            <p style="color: white; margin-bottom: 20px;">Are you ready to start the Todo App?</p>
+            <button onclick="startApp()" style="width: 150px;">Start Now</button>
+        </div>
     </div>
-    <ul id="list">
-    </ul>
-  </div>
 
+    <div class="main" id="todo-container" style="display: none;">
+        <h1>Todo App</h1>
+        <div class="inp">
+            <input id="input" type="text" placeholder="enter a todo task">
+            <button id="btn">Add</button>
+        </div>
+        <ul id="list"></ul>
+    </div>
 
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="app.js"></script>
 </body>
-
-<script src="app.js"></script>
 </html>

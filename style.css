@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     padding: 0;
@@ -99,4 +99,128 @@ li{
     width: 230px;
     word-break: break-word;
     overflow-wrap: break-word;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1c2c, #3f2b96);
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main {
+    width: 100%;
+    max-width: 470px;
+    max-height: 550px;
+    min-height: 250px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+/* Scrollbar Styling */
+.main::-webkit-scrollbar {
+    width: 6px;
+}
+.main::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.inp {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #836fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a5acd, #836fff);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+#list {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 10px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.todoText {
+    color: #ffffff;
+    flex: 1;
+    word-break: break-word;
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    h1 { font-size: 26px; }
+    .inp { flex-direction: column; }
+    input { width: 100%; }
+    button { width: 100%; }
 }
